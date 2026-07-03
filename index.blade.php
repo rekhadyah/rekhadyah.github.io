@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Rekha Dyah — Fullstack Web Developer Portfolio</title>
+    <!-- Tailwind CSS v4 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; -webkit-tap-highlight-color: transparent; }
+        .code-font { font-family: 'JetBrains Mono', monospace; }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased pb-24 md:pb-0 selection:bg-violet-600 selection:text-white">
+
+    <!-- CANVAS INTERACTIVE ANIMATION BACKGROUND -->
+    <canvas id="particleCanvas" class="absolute top-0 left-0 w-full h-[600px] pointer-events-none z-0 opacity-40"></canvas>
+
+    <!-- DESKTOP NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/60 hidden md:block">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="#" class="code-font text-sm font-bold tracking-widest text-violet-600">REKHA_DYAH.SOFTWARE</a>
+            <div class="flex items-center gap-8 text-xs font-semibold tracking-wider uppercase text-slate-600">
+                <a href="#expertise" class="hover:text-violet-600 transition-colors">Technical Stack</a>
+                <a href="#production" class="hover:text-violet-600 transition-colors">Production Systems</a>
+                <a href="#experience" class="hover:text-violet-600 transition-colors">Track Record</a>
+                <a href="mailto:rekhadyahmaharani@gmail.com" class="px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-violet-600 transition-all">Connect</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE NATIVE APP HEADER -->
+    <div class="block md:hidden sticky top-0 z-50 bg-white/85 backdrop-blur-md px-4 py-3.5 border-b border-violet-100/60 flex justify-between items-center shadow-3xs">
+        <!-- Brand Title -->
+        <span class="code-font text-xs font-black text-slate-900 tracking-wider">RDM.DEV <span class="text-violet-600">// APP</span></span>
+
+        <!-- Contact Me Action Pill with Pulsing Green Dot -->
+        <a href="mailto:rekhadyahmaharani@gmail.com" class="inline-flex items-center gap-2 px-3 py-1.5 bg-violet-50 hover:bg-violet-100 border border-violet-200/60 rounded-full active:scale-95 transition-all shadow-3xs group">
+            <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span class="text-[11px] font-bold text-violet-700 tracking-wide group-hover:text-violet-900 transition-colors">Contact Me</span>
+        </a>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <main class="relative z-10 max-w-6xl mx-auto px-4 md:px-6">
+
+        <!-- HERO SECTION -->
+        <header id="tentang" class="relative pt-12 md:pt-32 pb-20 grid md:grid-cols-12 gap-12 items-center overflow-hidden">
+            <!-- Decorative Glow Background Effects -->
+            <div class="absolute top-1/4 left-0 w-72 h-72 bg-violet-200/40 rounded-full blur-3xl -z-10 animate-pulse"></div>
+            <div class="absolute top-10 right-10 w-96 h-96 bg-indigo-100/50 rounded-full blur-3xl -z-10"></div>
+
+            <!-- LEFT COLUMN: HYPER-TEXT CONTENT -->
+            <div class="md:col-span-7 flex flex-col justify-center space-y-6 text-left" data-aos="fade-right">
+                
+                <!-- Status & Interactive Micro-Badges -->
+                <div class="flex flex-wrap items-center gap-2">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 text-[10px] uppercase font-bold tracking-widest text-violet-700 bg-violet-600/10 border border-violet-200/60 rounded-lg code-font">
+                        <span class="w-2 h-2 rounded-full bg-violet-600 animate-ping"></span> core_engine::running
+                    </div>
+                    <div class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-[10px] font-medium text-slate-500 bg-slate-100 border border-slate-200/60 rounded-lg code-font">
+                        v12.production_stable
+                    </div>
+                </div>
+                
+                <!-- Hyper-Typography Heading -->
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight text-slate-900 leading-[0.95] md:leading-[0.9]">
+                    Engineering <br class="hidden md:inline">
+                    <span class="relative inline-block my-1 md:my-2">
+                        <span class="relative z-10 text-slate-900">Web Architecture</span>
+                        <span class="absolute bottom-1 left-0 w-full h-3 md:h-4 bg-violet-200/60 -z-10"></span>
+                    </span> 
+                    <span class="block bg-gradient-to-r from-violet-600 via-indigo-600 to-fuchsia-600 bg-clip-text text-transparent pb-2">
+                        & AI Integrations.
+                    </span>
+                </h1>
+
+                <!-- Professional Core Value Block -->
+                <div class="relative pl-4 border-l-2 border-violet-500 my-2 space-y-3">
+                    <p class="text-sm md:text-base text-slate-700 font-medium leading-relaxed max-w-xl">
+                        Hi, I am <span class="text-slate-900 font-bold">Rekha Dyah</span>. Combining over 3 years of web system engineering with intelligent automation technologies.
+                    </p>
+                    <p class="text-xs md:text-sm text-slate-500 font-light leading-relaxed max-w-lg">
+                        My primary focus centers on designing high-scale backend architectures, engineering smart prompt flows via <span class="text-violet-600 font-medium code-font">Claude AI</span>, and deploying commercial SaaS platforms built on the <span class="text-indigo-600 font-medium code-font">Laravel</span> ecosystem.
+                    </p>
+                </div>
+
+                <!-- Live Performance Sub-Grid (Micro Metrics) -->
+                <div class="grid grid-cols-3 gap-3 max-w-md pt-2">
+                    <div class="p-3 bg-white border border-slate-100 rounded-xl shadow-3xs">
+                        <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider code-font">Backend</span>
+                        <span class="text-xs font-semibold text-slate-800">Robust Logic</span>
+                    </div>
+                    <div class="p-3 bg-white border border-slate-100 rounded-xl shadow-3xs">
+                        <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider code-font">AI Core</span>
+                        <span class="text-xs font-semibold text-violet-600">LLM Driven</span>
+                    </div>
+                    <div class="p-3 bg-white border border-slate-100 rounded-xl shadow-3xs">
+                        <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider code-font">SaaS Builder</span>
+                        <span class="text-xs font-semibold text-indigo-600">Multi-Tenant</span>
+                    </div>
+                </div>
+
+                <!-- Premium Call-to-Actions Buttons -->
+                <div class="flex flex-wrap items-center gap-3 pt-4">
+                    <a href="#production" class="group relative px-6 py-3.5 bg-slate-900 text-white font-medium rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-violet-600/10 transition-all text-xs md:text-sm w-full sm:w-auto text-center">
+                        <span class="relative z-10 flex items-center justify-center gap-2">
+                            Review Production Systems 
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 group-hover:translate-x-1 transition-transform">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                            </svg>
+                        </span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-violet-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-0"></div>
+                    </a>
+                    <a href="mailto:rekhadyahmaharani@gmail.com" class="px-6 py-3.5 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 font-semibold rounded-xl transition-all text-xs md:text-sm shadow-3xs w-full sm:w-auto text-center">
+                        Contact Me
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: PREMIUM GLASS TERMINAL & PROFILE CARD -->
+            <div class="md:col-span-5 flex justify-center md:justify-end" data-aos="fade-left">
+                <div class="relative w-full max-w-[360px] md:max-w-[400px]">
+                    
+                    <!-- Decorative Framework Tech Tags floating behind -->
+                    <div class="absolute -top-6 -left-6 bg-white border border-slate-100 px-3 py-1.5 rounded-xl shadow-md text-[10px] code-font text-violet-600 font-bold z-20 animate-bounce" style="animation-duration: 4s;">
+                        &lt;Fullstack Web Developer /&gt;
+                    </div>
+                    <div class="absolute -bottom-4 -right-2 bg-slate-950 text-cyan-400 border border-slate-800 px-3 py-1.5 rounded-xl shadow-lg text-[10px] code-font z-20 animate-bounce" style="animation-duration: 6s;">
+                        AI_Prompt::compiled
+                    </div>
+
+                    <!-- Main Dashboard Window Layout -->
+                    <div class="w-full bg-white/70 backdrop-blur-xl border border-slate-200/80 rounded-3xl shadow-2xl shadow-slate-200/50 overflow-hidden">
+                        <!-- Terminal Bar Header -->
+                        <div class="bg-slate-900/5 px-4 py-3 border-b border-slate-200/60 flex items-center justify-between">
+                            <div class="flex gap-1.5">
+                                <div class="w-3 h-3 rounded-full bg-rose-400"></div>
+                                <div class="w-3 h-3 rounded-full bg-amber-400"></div>
+                                <div class="w-3 h-3 rounded-full bg-emerald-400"></div>
+                            </div>
+                            <span class="text-[10px] code-font text-slate-400 tracking-wider">developer.json</span>
+                        </div>
+                        
+                        <!-- Profile Image Section with Masking & Details -->
+                        <div class="p-6 space-y-5">
+                            <div class="relative group aspect-square w-full overflow-hidden rounded-2xl bg-slate-100 border border-slate-200">
+                                <img src="foto-profil.jpg" alt="Rekha Dyah" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='/profile.png?'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+                            
+                           <!-- Internal Terminal Code Output Mockup -->
+                            <div class="bg-slate-950 p-4 rounded-xl text-left code-font text-[11px] leading-relaxed text-slate-300 shadow-inner">
+                                <p class="text-slate-500">// System Credentials & Stack Integration</p>
+                                <p><span class="text-violet-400">const</span> engineer = {</p>
+                                <p class="pl-4">name: <span class="text-emerald-400">"Rekha Dyah"</span>,</p>
+                                <p class="pl-4">role: <span class="text-emerald-400">"Full Stack AI Engineer"</span>,</p>
+                                <p class="pl-4">coreTech: [<span class="text-amber-400">"Laravel"</span>, <span class="text-amber-400">"AI API"</span>, <span class="text-amber-400">"REST API"</span>],</p>
+                                <p class="pl-4">ecosystem: [<span class="text-amber-400">"Technical SEO"</span>, <span class="text-amber-400">"Digital Ads"</span>, <span class="text-amber-400">"UI Design"</span>],</p>
+                                <p class="pl-4">status: <span class="text-emerald-400">"Ready_for_Scale"</span></p>
+                                <p>};</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- APP STATS HORIZONTAL METRICS -->
+        <section id="expertise" class="py-6 md:py-12 border-y border-slate-200/60 overflow-x-auto no-scrollbar flex gap-4">
+            <div class="min-w-[150px] md:flex-1 p-4 bg-white border border-slate-100 rounded-xl shadow-2xs flex items-center gap-3">
+                <div class="text-2xl font-black text-slate-900 code-font">03+</div>
+                <div class="text-[9px] uppercase tracking-widest text-slate-400 font-bold leading-tight">Years Of<br><span class="text-slate-600">Experience</span></div>
+            </div>
+            
+            <div class="min-w-[180px] md:flex-1 p-4 bg-white border border-slate-100 rounded-xl shadow-2xs flex items-center gap-3">
+                <div class="text-2xl font-black text-violet-600 code-font">LLM</div>
+                <div class="text-[9px] uppercase tracking-widest text-slate-400 font-bold leading-tight">Claude AI<br><span class="text-slate-600">Integration</span></div>
+            </div>
+            
+            <div class="min-w-[160px] md:flex-1 p-4 bg-white border border-slate-100 rounded-xl shadow-2xs flex items-center gap-3">
+                <div class="text-2xl font-black text-indigo-600 code-font">09+</div>
+                <div class="text-[9px] uppercase tracking-widest text-slate-400 font-bold leading-tight">Live Web<br><span class="text-slate-600">Productions</span></div>
+            </div>
+        </section>
+
+        <!-- HOVER CARDS: TECH MATRIX -->
+        <section class="py-12 space-y-4">
+            <h2 class="text-xs font-bold tracking-widest text-slate-400 uppercase code-font">// TECH_STACK</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div class="p-4 bg-white rounded-xl border border-slate-100 hover:border-violet-300 transition-all hover:-translate-y-1">
+                    <span class="block text-xs font-bold text-slate-900">Backend Core</span>
+                    <span class="text-[11px] text-slate-500 code-font">Laravel, REST API</span>
+                </div>
+                <div class="p-4 bg-white rounded-xl border border-slate-100 hover:border-violet-300 transition-all hover:-translate-y-1">
+                    <span class="block text-xs font-bold text-slate-900">Reactive Frontend</span>
+                    <span class="text-[11px] text-slate-500 code-font">Livewire, NextJS, PWA</span>
+                </div>
+                <div class="p-4 bg-white rounded-xl border border-slate-100 hover:border-violet-300 transition-all hover:-translate-y-1">
+                    <span class="block text-xs font-bold text-slate-900">Styling Engine</span>
+                    <span class="text-[11px] text-slate-500 code-font">Tailwind, Alpine.js</span>
+                </div>
+                <div class="p-4 bg-white rounded-xl border border-slate-100 hover:border-violet-300 transition-all hover:-translate-y-1">
+                    <span class="block text-xs font-bold text-slate-900">External Integrations</span>
+                    <span class="text-[11px] text-slate-500 code-font">Midtrans, Firebase</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTION DEPLOYMENT (PROJECTS) -->
+        <section id="production" class="py-8 space-y-6">
+            <div data-aos="fade-up">
+                <h2 class="text-xs font-bold tracking-widest text-violet-600 uppercase code-font">// DEPLOYED_SYSTEMS</h2>
+                <h3 class="text-2xl font-extrabold text-slate-900 tracking-tight">Product Portfolio Catalog</h3>
+            </div>
+
+            <!-- Feed Berbasis Aplikasi Mobile Grid/List -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Project 1: Trexa Advisor -->
+                <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between" data-aos="fade-up">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="px-2 py-0.5 bg-violet-50 text-violet-700 text-[10px] font-bold rounded code-font uppercase">Full Stack AI & Fintech Application</span>
+                            <div class="flex items-center gap-3">
+                                <span class="text-[11px] text-slate-400 font-medium">2025 - Present</span>
+                                <a href="https://trexa.id/" target="_blank" class="text-xs text-violet-600 hover:underline font-bold">Link &rarr;</a>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900">Trexa.id (AI Trading Assistant)</h4>
+                        <p class="text-xs text-slate-500 font-light leading-relaxed">
+                            Engaged fully as a <span class="text-slate-950 font-semibold">Full Stack Developer</span> in architecting the application end-to-end using Laravel. This platform modernizes the commercial ecosystem for buying and selling <span class="text-slate-900 font-medium">Expert Advisor (EA)</span> products alongside <span class="text-slate-950 font-medium">on-demand</span> custom trading robot development services. Developed a smart <span class="text-slate-950 font-semibold">AI Assistant Chat powered by the Claude AI API</span>, user authentication systems, MySQL database designs, and an administrative dashboard via Filament. Operational integrations incorporate a <span class="text-slate-950 font-semibold">manual payment</span> schema paired with a <span class="text-slate-950 font-semibold">REST API architecture for automated client EA license activation</span>, execution synchronization with <span class="text-slate-950 font-medium">MetaTrader</span> terminals, and direct handling of <span class="text-slate-950 font-semibold">production server deployment and maintenance</span>.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-4">
+                        <span class="text-[10px] text-slate-500 bg-slate-50 px-2 py-0.5 rounded border border-slate-100 code-font">Laravel (Filament)</span>
+                        <span class="text-[10px] text-slate-500 bg-slate-50 px-2 py-0.5 rounded border border-slate-100 code-font">Claude AI API</span>
+                        <span class="text-[10px] text-slate-500 bg-slate-50 px-2 py-0.5 rounded border border-slate-100 code-font">MetaTrader Bridge REST API</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: Figure Factories -->
+                <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between" data-aos="fade-up" data-aos-delay="50">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="px-2 py-0.5 bg-indigo-50 text-indigo-700 text-[10px] font-bold rounded code-font uppercase">E-Commerce & Fullstack App</span>
+                            <a href="https://figurefactories.com/" target="_blank" class="text-xs text-violet-600 hover:underline font-bold">Link &rarr;</a>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900">Figure Factories</h4>
+                        <p class="text-xs text-slate-500 font-light leading-relaxed">
+                            Developed a full-scale (<span class="text-slate-950 font-medium">Full Stack</span>) web architecture built on <span class="text-slate-950 font-medium">Laravel</span> for an e-commerce platform that facilitates ordering and trading physical <span class="text-slate-900 font-medium">custom figurines</span> derived from <span class="text-slate-950 font-medium">Roblox</span> game characters. Integrated a seamless, instant <span class="text-slate-950 font-semibold">auto payment system</span> and established a robust <span class="text-slate-950 font-semibold">REST API</span> architecture to handle transaction data synchronization, custom order manifest management, and digital interface optimization end-to-end.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-4">
+                        <span class="text-[10px] text-slate-500 bg-slate-50 px-2 py-0.5 rounded border border-slate-100 code-font">Laravel</span>
+                        <span class="text-[10px] text-slate-500 bg-slate-50 px-2 py-0.5 rounded border border-slate-100 code-font">REST API Engine</span>
+                        <span class="text-[10px] text-slate-500 bg-slate-50 px-2 py-0.5 rounded border border-slate-100 code-font">Auto Payment Gateway</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: Pandu AI -->
+                <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between" data-aos="fade-up">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="px-2 py-0.5 bg-fuchsia-50 text-fuchsia-700 text-[10px] font-bold rounded code-font uppercase">AI Analytics & Trading Platform</span>
+                            <div class="flex items-center gap-3">
+                                <span class="text-[11px] text-slate-400 font-medium">2025 - Present</span>
+                                <a href="https://pandu.trexa.id/" target="_blank" class="text-xs text-violet-600 hover:underline font-bold">Link &rarr;</a>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900">Pandu AI Platform</h4>
+                        <p class="text-xs text-slate-500 font-light leading-relaxed">
+                            Engineered an AI-driven trading analytics and recommendation platform leveraging the <span class="text-slate-950 font-medium">Laravel Livewire</span> and <span class="text-slate-950 font-medium">Tailwind CSS</span> ecosystem. The system architecture coordinates a <span class="text-slate-950 font-semibold">REST API to harvest real-time trading metrics from MetaTrader</span> periodically, which are subsequently computed via sophisticated Prompt Engineering techniques over the <span class="text-slate-950 font-semibold">Claude AI API</span> to deliver comprehensive market research reporting and tactical insights for traders. Backed by relational database system operations and digital payment gateway module integrations.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-4">
+                        <span class="text-[10px] text-slate-500 bg-slate-50 px-2 py-0.5 rounded border border-slate-100 code-font">Laravel Livewire</span>
+                        <span class="text-[10px] text-slate-500 bg-slate-50 px-2 py-0.5 rounded border border-slate-100 code-font">Claude AI Engine</span>
+                        <span class="text-[10px] text-slate-500 bg-slate-50 px-2 py-0.5 rounded border border-slate-100 code-font">MetaTrader REST API</span>
+                        <span class="text-[10px] text-slate-500 bg-slate-50 px-2 py-0.5 rounded border border-slate-100 code-font">Payment Gateway</span>
+                    </div>
+                </div>
+
+                <!-- Project 4: Nuvio Studio -->
+                <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between" data-aos="fade-up" data-aos-delay="50">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="px-2 py-0.5 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded code-font uppercase">Personal Fun Project & SaaS</span>
+                            <span class="text-[11px] text-slate-400 font-medium">SaaS Builder</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900">Nuvio Studio (SaaS Builder)</h4>
+                        <p class="text-xs text-slate-500 font-light leading-relaxed">
+                            A personal execution experiment focused on structuring a <span class="text-slate-950 font-medium">multi-tenant Software-as-a-Service (SaaS)</span> model tailored specifically for MSME digitization and marketing needs. This architecture integrates <span class="text-slate-950 font-semibold">in-app server automation for instantaneous domain or subdomain deployment and ordering</span>, digital payment gateway configurations, and an integrated <span class="text-slate-950 font-semibold">WhatsApp Business Management Chat</span> utility to optimize workflow and consumer response operations.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-4">
+                        <span class="text-[10px] text-slate-500 bg-slate-50 px-2 py-0.5 rounded border border-slate-100 code-font">SaaS Multitenancy</span>
+                        <span class="text-[10px] text-slate-500 bg-slate-50 px-2 py-0.5 rounded border border-slate-100 code-font">In-App Server Automation</span>
+                        <span class="text-[10px] text-slate-500 bg-slate-50 px-2 py-0.5 rounded border border-slate-100 code-font">WhatsApp Business API</span>
+                        <span class="text-[10px] text-slate-500 bg-slate-50 px-2 py-0.5 rounded border border-slate-100 code-font">Payment Gateway</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Keahlian Tambahan (Additional Ecosystem Skills) -->
+            <div class="bg-white rounded-2xl border border-slate-100 divide-y divide-slate-100 overflow-hidden shadow-2xs">
+                <!-- Skill 1 -->
+                <div class="p-4 flex justify-between items-center text-xs">
+                    <div>
+                        <span class="font-bold text-slate-900 block">Technical & On-Page SEO Optimization</span>
+                        <span class="text-[10px] text-slate-400">Designing SEO-friendly web structures, dynamic Meta Tags/Open Graph optimizations, automated sitemap/robots configurations, alongside Mobile-First Indexing implementations for peak search visibility.</span>
+                    </div>
+                    <span class="px-2.5 py-1 bg-violet-50 text-violet-600 text-[10px] font-bold rounded-md uppercase tracking-wider code-font">SEO</span>
+                </div>
+                <!-- Skill 2 -->
+                <div class="p-4 flex justify-between items-center text-xs">
+                    <div>
+                        <span class="font-bold text-slate-900 block">Web UI/UX Designer</span>
+                        <span class="text-[10px] text-slate-400">Architecting clean, modern, and minimalist digital user interfaces engineered toward user conversions.</span>
+                    </div>
+                    <span class="px-2.5 py-1 bg-violet-50 text-violet-600 text-[10px] font-bold rounded-md uppercase tracking-wider code-font">Design</span>
+                </div>
+                <!-- Skill 3 -->
+                <div class="p-4 flex justify-between items-center text-xs">
+                    <div>
+                        <span class="font-bold text-slate-900 block">Facebook & Google Ads Marketing</span>
+                        <span class="text-[10px] text-slate-400">Formulating, executing, and analyzing the metrics performance of paid enterprise-scale digital ad campaigns.</span>
+                    </div>
+                    <span class="px-2.5 py-1 bg-violet-50 text-violet-600 text-[10px] font-bold rounded-md uppercase tracking-wider code-font">Marketing</span>
+                </div>
+                <!-- Skill 4 -->
+                <div class="p-4 flex justify-between items-center text-xs">
+                    <div>
+                        <span class="font-bold text-slate-900 block">Social Media Manager</span>
+                        <span class="text-[10px] text-slate-400">Directing digital content distribution strategies, running audience research, and maximizing organic social ecosystem engagement.</span>
+                    </div>
+                    <span class="px-2.5 py-1 bg-violet-50 text-violet-600 text-[10px] font-bold rounded-md uppercase tracking-wider code-font">Management</span>
+                </div>
+                <!-- Skill 5 -->
+                <div class="p-4 flex justify-between items-center text-xs">
+                    <div>
+                        <span class="font-bold text-slate-900 block">Video Editing & Production</span>
+                        <span class="text-[10px] text-slate-400">Processing creative audio-visual post-production workflows tailored for product promotions and digital campaign distribution.</span>
+                    </div>
+                    <span class="px-2.5 py-1 bg-violet-50 text-violet-600 text-[10px] font-bold rounded-md uppercase tracking-wider code-font">Creative</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- RECORD EXPERIENCE -->
+        <section id="experience" class="py-8 space-y-6">
+            <h2 class="text-xs font-bold tracking-widest text-slate-400 uppercase code-font">// TIMELINE_LOG</h2>
+            <div class="space-y-3">
+                <!-- Record 1: Robotop -->
+                <div class="p-4 bg-white border border-slate-100 rounded-xl shadow-2xs" data-aos="fade-up">
+                    <div class="flex justify-between items-center text-[10px] code-font text-violet-600 mb-1">
+                        <span>FULLSTACK_PROGRAMMER</span>
+                        <span>2022 - PRESENT</span>
+                    </div>
+                    <div class="text-sm font-bold text-slate-900">Robotop — Pontianak</div>
+                    <p class="text-xs text-slate-500 font-light font-sans mt-1">Commanding core backend Laravel operations, orchestrating open-architecture REST APIs, and driving server maintenance.</p>
+                </div>
+                
+                <!-- Record 2: CV. Ultima Solusi Digital -->
+                <div class="p-4 bg-white border border-slate-100 rounded-xl shadow-2xs" data-aos="fade-up">
+                    <div class="flex justify-between items-center text-[10px] code-font text-indigo-600 mb-1">
+                        <span>JUNIOR_WEB_PROGRAMMER</span>
+                        <span>2021 - 2022</span>
+                    </div>
+                    <div class="text-sm font-bold text-slate-900">CV. Ultima Solusi Digital — Pontianak</div>
+                    <p class="text-xs text-slate-500 font-light font-sans mt-1">Constructing structured backend frameworks via Laravel, integrating transaction modules, and customizing WordPress instances.</p>
+                </div>
+
+                <!-- Record 3: CV. Idekite Indonesia -->
+                <div class="p-4 bg-white border border-slate-100 rounded-xl shadow-2xs" data-aos="fade-up">
+                    <div class="flex justify-between items-center text-[10px] code-font text-slate-400 mb-1">
+                        <span>INTERN_JUNIOR_WEB_PROGRAMMER</span>
+                        <span>JAN 2021 - APR 2021</span>
+                    </div>
+                    <div class="text-sm font-bold text-slate-900">CV. Idekite Indonesia — Pontianak</div>
+                    <p class="text-xs text-slate-500 font-light font-sans mt-1">Participating actively within web system production squads, strengthening core Laravel workflows, and applying OOP concepts via practical codebases.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200/60 py-8 text-center text-xs text-slate-400 hidden md:block">
+        <p class="font-bold code-font text-slate-800">REKHA_DYAH.SOFTWARE // 2026</p>
+        <p class="text-[10px] code-font text-slate-400 mt-1">status::production_ready • Pontianak, ID</p>
+    </footer>
+
+    <!-- NATIVE APP BOTTOM NAVIGATION (iOS 2026 Floating Style - Refined Violet Tint) -->
+    <div class="md:hidden fixed bottom-5 left-4 right-4 bg-white/85 backdrop-blur-2xl border border-violet-200/50 px-6 pt-3.5 pb-4 flex justify-between items-center z-50 rounded-3xl shadow-[0_12px_40px_rgba(124,58,237,0.08)] transition-all duration-300">
+        <!-- Item 1: Profile -->
+        <a href="#tentang" class="flex flex-col items-center gap-1 text-slate-400 hover:text-violet-600 active:scale-90 transition-all duration-200 group">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="w-[22px] h-[22px] group-hover:stroke-violet-600 transition-colors">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21 alert 8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            </svg>
+            <span class="text-[9px] font-bold tracking-wider uppercase code-font scale-95 origin-center group-hover:text-violet-600 transition-colors">Profile</span>
+        </a>
+        
+        <!-- Item 2: Project -->
+        <a href="#production" class="flex flex-col items-center gap-1 text-slate-400 hover:text-violet-600 active:scale-90 transition-all duration-200 group">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="w-[22px] h-[22px] group-hover:stroke-violet-600 transition-colors">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+            </svg>
+            <span class="text-[9px] font-bold tracking-wider uppercase code-font scale-95 origin-center group-hover:text-violet-600 transition-colors">Projects</span>
+        </a>
+        
+        <!-- Item 3: Log -->
+        <a href="#experience" class="flex flex-col items-center gap-1 text-slate-400 hover:text-violet-600 active:scale-90 transition-all duration-200 group">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="w-[22px] h-[22px] group-hover:stroke-violet-600 transition-colors">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
+            </svg>
+            <span class="text-[9px] font-bold tracking-wider uppercase code-font scale-95 origin-center group-hover:text-violet-600 transition-colors">Logs</span>
+        </a>
+        
+        <!-- Item 4: Contact -->
+        <a href="mailto:rekhadyahmaharani@gmail.com" class="flex flex-col items-center gap-1 text-slate-400 hover:text-violet-600 active:scale-90 transition-all duration-200 group">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="w-[22px] h-[22px] group-hover:stroke-violet-600 transition-colors">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.904a2.25 2.25 0 0 1-1.18 1.962l-3.376 1.897a4.5 4.5 0 0 1-4.388 0L9.43 11.866a2.25 2.25 0 0 1-1.18-1.962V9M21.75 9a2.25 2.25 0 0 0-2.25-2.25H4.5A2.25 2.25 0 0 0 2.25 9m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0l-7.5-4.615M2.25 9v.243a2.25 2.25 0 0 0 1.07 1.916l7.5 4.615a2.25 2.25 0 0 0 2.36 0l7.5-4.615" />
+            </svg>
+            <span class="text-[9px] font-bold tracking-wider uppercase code-font scale-95 origin-center group-hover:text-violet-600 transition-colors">Contact</span>
+        </a>
+    </div>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 800 });
+
+        // CANVAS MATRIX INTERACTIVE PARTICLE WAVE ANIMATION
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let mouse = { x: null, y: null, radius: 120 };
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = 600;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        window.addEventListener('mousemove', function(e) {
+            mouse.x = e.x;
+            mouse.y = e.y + window.scrollY;
+        });
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.baseX = this.x;
+                this.baseY = this.y;
+                this.density = (Math.random() * 30) + 1;
+            }
+            draw() {
+                ctx.fillStyle = 'rgba(124, 58, 237, 0.7)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.closePath();
+                ctx.fill();
+            }
+            update() {
+                let dx = mouse.x - this.x;
+                let dy = mouse.y - this.y;
+                let distance = Math.sqrt(dx * dx + dy * dy);
+                let forceDirectionX = dx / distance;
+                let forceDirectionY = dy / distance;
+                let maxDistance = mouse.radius;
+                let force = (maxDistance - distance) / maxDistance;
+                let directionX = forceDirectionX * force * this.density;
+                let directionY = forceDirectionY * force * this.density;
+
+                if (distance < mouse.radius) {
+                    this.x -= directionX;
+                    this.y -= directionY;
+                } else {
+                    if (this.x !== this.baseX) {
+                        let dx = this.x - this.baseX;
+                        this.x -= dx/10;
+                    }
+                    if (this.y !== this.baseY) {
+                        let dy = this.y - this.baseY;
+                        this.y -= dy/10;
+                    }
+                }
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            let numberOfParticles = (canvas.width * canvas.height) / 4000;
+            for (let i = 0; i < numberOfParticles; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].draw();
+                particles[i].update();
+            }
+            requestAnimationFrame(animate);
+        }
+
+        initParticles();
+        animate();
+    </script>
+</body>
+</html>
